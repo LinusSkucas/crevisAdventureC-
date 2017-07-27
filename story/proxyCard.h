@@ -2,6 +2,7 @@
 
 // new function : connect input
 
+void connect();
 
 struct states
 {

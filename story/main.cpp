@@ -4,6 +4,7 @@
 #include <windows.h>
 #include <mmsystem.h>
 #include "envping.h"
+#include "proxyCard.h"
 using namespace std;
 
 
@@ -14,7 +15,7 @@ using namespace std;
 string bag[10];
 
 room lookRoom;
-
+cardReader read;
 look checkChan;
 
 int main()
@@ -228,8 +229,17 @@ int main()
 												print("You come to a food factory. Saddly a gate with a proximity card reader is there and the gate is locked.");
 												print("To make matters worse, the lights are out - meaning there is a power outage.");
 												print("You somehow need to power the card reader. Then power the motor.");
-
-
+												Sleep(3200);
+												print("\n\n");
+												print("HINT: You can now use the connect command prompt to open it type Z.");
+												choise = getInput("Z to open connect prompt and W to walk through gate");
+												if (choise == 'Z')
+												{
+													while (read.lookS1(1) == false)
+													{
+														connect();
+													}
+												}
 											}
 										}
 									}
