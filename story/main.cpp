@@ -192,6 +192,7 @@ int main()
 										print("\n\n");
 
 										print("You decide to climb the tree");
+										print("It is currently night.");
 										Sleep(563);
 										print("On your way up you start getting really hungrey.");
 										Sleep(306);
@@ -200,14 +201,36 @@ int main()
 										if (choise == 'U')
 										{
 											print("You decide to climb up.");
-											print("Suddenly, the banch you are standing on brakes!\nYou the die :(");
+											print("Suddenly, the banch you are standing on brakes!\nYou then die :(");
 											PlaySound(TEXT("tombone.wav"), NULL, SND_FILENAME);
 										}
 										else if (choise == 'D')
 										{
 											// Live
 											print("You climb down the tree.");
-											print("");
+											print("You decide because you are really hungrey, you want to go to the lights");
+											print("Do you want to [W]alk or [R]un");
+											choise = lookRoom.space(2, 'W');
+											if (choise == 'R')
+											{
+												print("You start running.");
+												print("Saddly, you get really tired really fast so you lay down and go to sleep.");
+												Sleep(1000);
+												print("...");
+												Sleep(2000);
+												print("In the morning you find big rats eating your brain. you die :(");
+											}
+											else if (choise == 'W')
+											{
+												print("You decide to walk to the place with lights.");
+												print("It takes about 5 hours of walking to get there.");
+												Sleep(1000);
+												print("You come to a food factory. Saddly a gate with a proximity card reader is there and the gate is locked.");
+												print("To make matters worse, the lights are out - meaning there is a power outage.");
+												print("You somehow need to power the card reader. Then power the motor.");
+
+
+											}
 										}
 									}
 								}

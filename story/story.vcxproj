@@ -149,12 +149,14 @@
     <ClCompile Include="functions.cpp" />
     <ClCompile Include="looks.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="proxyCard.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="enemy.h" />
     <ClInclude Include="envping.h" />
     <ClInclude Include="functions.h" />
     <ClInclude Include="looks.h" />
+    <ClInclude Include="proxyCard.h" />
     <ClInclude Include="utilites.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

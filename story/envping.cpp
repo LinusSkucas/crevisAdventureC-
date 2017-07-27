@@ -57,14 +57,19 @@ string look::distLook(int env)
 	{
 	case 1:
 		return description.env1;
+		break;
 	case 2:
 		return description.env2;
+		break;
 	case 3:
 		return description.env3;
+		break;
 	case 4:
 		return description.env4;
+		break;
 	case 5:
 		return description.env5;
+		break;
 	default:
 		break;
 	}

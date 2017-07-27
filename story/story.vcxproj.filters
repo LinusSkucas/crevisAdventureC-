@@ -30,6 +30,9 @@
     <ClCompile Include="looks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="proxyCard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utilites.h">
@@ -45,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="looks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="proxyCard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
