@@ -120,7 +120,9 @@ int main()
 						print("Suddenly the path splits into 2 paths one going to the water (right) and one going to the woods (left)");
 						print("HINT: You want wood from a lumberjack.");
 						print("Type L to go left and R to go right");
-						choise = lookRoom.space(1);
+						choise = lookRoom.space(1, 'L');
+
+						
 						//cout << choise << endl;
 						if (choise == 'R')
 						{
@@ -151,7 +153,7 @@ int main()
 								print("A few steps in a storm starts. You run for shelter, after a mile of running you come across a lumberjacks cablin.");
 								print("You go inside and find a nice place to sleep. After a few hours the lumberjack comes back.");
 								print("He wants food and matches for exchange of you sleeping in his house.");
-								if (checkChan.keyLook(1) == false)
+								if (lookRoom.lookCommand.keyLook(1) == false)
 								{
 									Sleep(3000);
 									print("");
@@ -160,7 +162,7 @@ int main()
 									system("pause");
 									return 0;
 								}
-								else if (checkChan.keyLook(1) == true)
+								else if (lookRoom.lookCommand.keyLook(1) == true)
 								{
 									// get things for lumber jack
 									print("The lumberjack thanks you for the food");

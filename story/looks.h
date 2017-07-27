@@ -3,8 +3,10 @@
 #include "functions.h"
 #include "utilites.h"
 
+
 class room
 {
 public:
-	char space(int);
+	char space(int, char);
+	look lookCommand;
 };
