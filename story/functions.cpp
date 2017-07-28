@@ -1,4 +1,3 @@
-#include "functions.h"
 #include "utilites.h"
 #include <cstdlib>
 #include <chrono>

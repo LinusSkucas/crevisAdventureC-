@@ -38,9 +38,6 @@
     <ClInclude Include="utilites.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="functions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>

@@ -1,5 +1,4 @@
 #include "proxyCard.h"
-#include "functions.h"
 #include "utilites.h"
 #include <iostream>
 using namespace std;

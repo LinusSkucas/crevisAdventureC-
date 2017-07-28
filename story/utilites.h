@@ -7,3 +7,5 @@ using namespace std;
 char getInput(string prompt);
 
 void print(string stuff);
+
+void loading();

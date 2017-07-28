@@ -154,7 +154,6 @@
   <ItemGroup>
     <ClInclude Include="enemy.h" />
     <ClInclude Include="envping.h" />
-    <ClInclude Include="functions.h" />
     <ClInclude Include="looks.h" />
     <ClInclude Include="proxyCard.h" />
     <ClInclude Include="utilites.h" />

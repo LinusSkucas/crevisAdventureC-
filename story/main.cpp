@@ -1,4 +1,3 @@
-#include "functions.h"
 #include "utilites.h"
 #include "looks.h"
 #include <windows.h>
@@ -20,8 +19,8 @@ look checkChan;
 
 int main()
 {
-	//loading();
-	connect();
+	loading();
+	//connect();
 	cout << "~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~" << endl;
 	cout << "~SMALL CREVICE ADVENTURE~~~~~~~~~~~~~_________~~~~~~~~~~~~~~~~~" << endl;
 	cout << "~VERSION BETA~~~~~~~~~~~~~~~~~~~~~~~/~~~~~~~~~\~~~~~~~~~~~~~~~~" << endl;
@@ -90,7 +89,7 @@ int main()
 					print("Congrats! You survived level 1!");
 					system("pause");
 					print("Starting Level 2");
-					//loading();
+					loading();
 
 					// Level 2
 					print("In level 2 you will be able to use the look command.\n After you use the look command then you will be directed to the next Good path.");

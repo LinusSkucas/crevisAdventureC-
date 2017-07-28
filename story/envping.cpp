@@ -1,5 +1,4 @@
 #include "envping.h"
-#include "functions.h"
 #include "utilites.h"
 
 void look::keyChange(int chan, bool change)
