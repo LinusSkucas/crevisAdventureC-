@@ -239,8 +239,24 @@ int main()
 													while (read.lookS1('1') == false)
 													{
 														connect();
-														print("Done!");
 													}
+													choise = getInput("Do you want to [S]can your card or s[W]ipe your card");
+													if (choise == 'W')
+													{
+														print("You try to swipe your card. Saddly, it is a proimity card. When you were doing that a guard saw you.\nNow he is dragging you through a meat grinder.\nGame Over!");
+													}
+													else if (choise == 'S')
+													{
+														// Auth for 3 min. to start motor.
+														print("To be continued...");
+													}
+												}
+												else if (choise == 'W')
+												{
+													print("You try walking through the gate.");
+													print("Saddly an alarm on a battery sounds and a security guard comes out,\ndrags you inside, and puts you through a meat grinder\nGame over :(");
+													system("pause");
+													return 0;
 												}
 												else
 												{
