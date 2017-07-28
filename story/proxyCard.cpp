@@ -86,44 +86,53 @@ void connect()
 	bool connectB = false;
 	bool connectR = false;
 	bool connectM = false;
+	struct commandOutline
+	{
+		string connect;
+		string obj1 = "";
+		string to = "";
+		string obj2 = "";
+	};
 	char d;
 	cardReader reader;
 	string input;
-	while (true)
+	commandOutline outline;
+	bool exit = false;
+	while (exit == false)
 	{
 		cout << "> ";
-		cin >> input;
+		//getline(cin, input);
+		//n >> connect obj1 to obj2
+		cin >> outline.connect >> outline.obj1 >> outline.to >> outline.obj2;
 		// find if exit
-		if (input == "exit")
-			break;
-		if (input[8] == 'B')
+		if (outline.obj1 == "B")
 		{
 			connectB = true;
 		}
-		else if (input[8] == 'R')
+		else if (outline.obj1 == "R")
 		{
 			connectR = true;
 		}
-		else if (input[8] == 'M')
+		else if (outline.obj1 == "M")
 		{
-			if (reader.lookS1('1' == true))
+			if (reader.lookS1('1') == true)
 			{
 				connectM = true;
 			}
 			else
 				print("Finish the proximity card chanllenge first!");
 		}
-		if (input[13] == 'B')
+		if (outline.obj2 == "B")
 		{
 			connectB = true;
 		}
-		else if (input[13] == 'R')
+		else if (outline.obj2 == "R")
 		{
 			connectR = true;
 		}
-		else if (input [13] == 'M')
+		else if (outline.obj2 == "M")
 		{
-			if (reader.lookS1('1' == true))
+			if (reader.lookS1('1') == true)
 			{
 				connectM = true;
 			}
@@ -134,16 +143,25 @@ void connect()
 		if (connectB == true && connectR == true)
 		{
 			cout << "[P]ositive or [N]egitive" << endl;
+			cout << "> ";
 			cin >> d;
 			if (d == 'P')
 			{
 				reader.changeS1('P', true);
 				print("Connected! Now connect the negitive side!");
+				string d;
+				d = getInput("Do you want to exit? [Y]es [N]o.");
+				if (d == "Y")
+					exit = true;
 			}
 			else if (d == 'N')
 			{
 				reader.changeS1('N', true);
 				print("Connected! Now connect the positive side!");
+				string d;
+				d = getInput("Do you want to exit? [Y]es [N]o.");
+				if (d == "Y")
+					exit = true;
 			}
 
 		}
