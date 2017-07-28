@@ -21,6 +21,7 @@ look checkChan;
 int main()
 {
 	//loading();
+	connect();
 	cout << "~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~o~" << endl;
 	cout << "~SMALL CREVICE ADVENTURE~~~~~~~~~~~~~_________~~~~~~~~~~~~~~~~~" << endl;
 	cout << "~VERSION BETA~~~~~~~~~~~~~~~~~~~~~~~/~~~~~~~~~\~~~~~~~~~~~~~~~~" << endl;
@@ -167,6 +168,7 @@ int main()
 								{
 									// get things for lumber jack
 									print("The lumberjack thanks you for the food");
+									print("All there is to look at is random pieces of grass");
 									choise = getInput("He recommends to go the metal dome (M) or right (R)");
 									if (choise == 'M')
 									{
@@ -235,10 +237,17 @@ int main()
 												choise = getInput("Z to open connect prompt and W to walk through gate");
 												if (choise == 'Z')
 												{
-													while (read.lookS1(1) == false)
+													while (read.lookS1('1') == false)
 													{
 														connect();
+														print("Done!");
 													}
+												}
+												else
+												{
+													print("You need to connect things next time. Stopping game...");
+													system("pause");
+													return 0;
 												}
 											}
 										}
